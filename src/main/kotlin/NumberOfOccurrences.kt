@@ -15,8 +15,11 @@ fun main() {
     var counter = 0
     while (true) {
         idx = str.indexOf(subStr, idx + 1)
-        if (idx != -1) counter++
-        else break
+        if (idx != -1) {
+            counter++
+        } else {
+            break
+        }
     }
     println(counter)
 }
