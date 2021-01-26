@@ -4,11 +4,25 @@ import java.util.*
 
 fun main() {
     val scanner = Scanner(System.`in`)
-    val arrNum = scanner.nextLine().split(" ").map { it.toInt() }
+    var arrNum: List<Int>
+    var str: String
+    while (true) {
+        str = scanner.nextLine()
 
-    var sum = 0
-    for (cur in arrNum)
-        sum += cur
+        when {
+            ("/exit".equals(str)) -> {
+                println("Bye!")
+                break
+            }
+            (str.isBlank()) -> continue
+            else -> {
+                arrNum = str.split(" ").map { it.toInt() }
 
-    println(sum)
+                var sum = 0
+                for (cur in arrNum)
+                    sum += cur
+                println(sum)
+            }
+        }
+    }
 }
