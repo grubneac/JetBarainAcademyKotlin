@@ -14,6 +14,7 @@ fun main() {
                 println("Bye!")
                 break
             }
+            ("/help".equals(str)) -> println("The program calculates the sum of numbers")
             (str.isBlank()) -> continue
             else -> {
                 arrNum = str.split(" ").map { it.toInt() }
